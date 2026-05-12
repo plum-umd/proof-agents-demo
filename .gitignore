@@ -1,0 +1,12 @@
+.lake/
+.repo/
+.capture/
+build/
+*.olean
+*.ilean
+*.c
+*.o
+*.so
+*.dll
+*.dylib
+*.exe
