@@ -1,6 +1,6 @@
-import Semantics.SmallStep
+import Semantics.Arithmetic.SmallStep
 
-namespace Semantics
+namespace Semantics.Arithmetic
 
 inductive Context where
   | hole : Context
@@ -684,7 +684,7 @@ theorem EvalPlug.plug_rel : EvalPlug c e (plug c e) := by
   | times_right n₁ c ih =>
       exact EvalPlug.times_right ih
 
-theorem EvalPlug.eq_plug : EvalPlug c e whole → Semantics.plug c e = whole := by
+theorem EvalPlug.eq_plug : EvalPlug c e whole → plug c e = whole := by
   intro h
   induction h with
   | hole =>
@@ -1240,4 +1240,4 @@ theorem EvalStandardReduce.iff_stepEval : EvalStandardReduce e n ↔ StepEval e 
     _ ↔ Steps e (.int n) :=
       StandardSteps.iff_steps_int
 
-end Semantics
+end Semantics.Arithmetic

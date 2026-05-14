@@ -1,4 +1,4 @@
-namespace Semantics
+namespace Semantics.Arithmetic
 
 inductive Expr where
   | int : Int → Expr
@@ -8,4 +8,4 @@ inductive Expr where
   | times : Expr → Expr → Expr
   deriving Repr, DecidableEq
 
-end Semantics
+end Semantics.Arithmetic

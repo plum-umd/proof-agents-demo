@@ -1,6 +1,6 @@
-import Semantics.BigStep
+import Semantics.Arithmetic.BigStep
 
-namespace Semantics
+namespace Semantics.Arithmetic
 
 inductive StandardStep : Expr → Expr → Prop where
   | succ_step : StandardStep e e' → StandardStep (.succ e) (.succ e')
@@ -465,4 +465,4 @@ theorem Steps.confluent : Steps e e₁ → Steps e e₂ → ∃ e₃, Steps e₁
       rcases ih hleft with ⟨e₃, hend, hjoin⟩
       exact ⟨e₃, hend, hright.trans hjoin⟩
 
-end Semantics
+end Semantics.Arithmetic

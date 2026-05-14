@@ -1,6 +1,6 @@
-import Semantics.Definitional
+import Semantics.Arithmetic.Definitional
 
-namespace Semantics
+namespace Semantics.Arithmetic
 
 inductive Eval : Expr → Int → Prop where
   | int : Eval (.int n) n
@@ -65,4 +65,4 @@ theorem Eval.of_denote_eq : denote e = n → Eval e n := by
       rw [← h]
       exact Eval.times (ih₁ rfl) (ih₂ rfl)
 
-end Semantics
+end Semantics.Arithmetic

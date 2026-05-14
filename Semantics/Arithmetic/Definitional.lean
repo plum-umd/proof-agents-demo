@@ -1,6 +1,6 @@
-import Semantics.Syntax
+import Semantics.Arithmetic.Syntax
 
-namespace Semantics
+namespace Semantics.Arithmetic
 
 def denote : Expr → Int
   | .int n => n
@@ -19,4 +19,4 @@ example : denote (.plus (.int 2) (.int 3)) = 5 := rfl
 
 example : denote (.times (.plus (.int 2) (.int 3)) (.pred (.int 5))) = 20 := rfl
 
-end Semantics
+end Semantics.Arithmetic

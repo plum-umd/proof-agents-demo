@@ -1,7 +1,7 @@
 import Std.Internal.Parsec
-import Semantics.Syntax
+import Semantics.Arithmetic.Syntax
 
-namespace Semantics
+namespace Semantics.Arithmetic
 
 namespace Parser
 
@@ -79,4 +79,4 @@ example : parsesAs "2 + 3 * pred 5" (.plus (.int 2) (.times (.int 3) (.pred (.in
 
 end Parser
 
-end Semantics
+end Semantics.Arithmetic
